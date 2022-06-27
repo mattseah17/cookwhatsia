@@ -11,10 +11,10 @@ const OverLay = (props) => {
           <h2>{props.title}</h2>
         </header>
         <div className={styles.content}>
-          <p>{props.message}</p>
+          <ol>{props.message}</ol>
         </div>
         <footer className={styles.actions}>
-          <ModalButton onClick={props.okayClicked}>Okay</ModalButton>
+          <ModalButton onClick={props.onClick}>Close</ModalButton>
         </footer>
       </div>
     </div>
@@ -22,6 +22,10 @@ const OverLay = (props) => {
 };
 
 const RecipeModal = (props) => {
+  if (!props.show) {
+    return null;
+  }
+
   return (
     <>
       {ReactDOM.createPortal(
@@ -29,6 +33,7 @@ const RecipeModal = (props) => {
           title={props.title}
           message={props.message}
           okayClicked={props.okayClicked}
+          onClick={props.onClose}
         />,
         document.querySelector("#modal-root")
       )}

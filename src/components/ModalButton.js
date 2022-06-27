@@ -5,7 +5,7 @@ const ModalButton = (props) => {
   return (
     <button
       className={`btn ${styles.button} ${props.className}`}
-      type={props.type || "button"}
+      type="button"
       onClick={props.onClick}
     >{props.children}</button>
   );

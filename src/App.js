@@ -3,7 +3,7 @@ import Form from "./components/Form";
 import Results from "./components/Results";
 
 function App() {
-  const [recipeData, setRecipeData] = useState({});
+  const [recipeData, setRecipeData] = useState([]);
 
   const apiKey = "f30518619f5b4aaa92944bafe8f2b949";
 
@@ -19,13 +19,11 @@ function App() {
   return (
     <div>
       <Form onSave={generateSearch} />
-      <br/>
-      <br/>
+      <br />
+      <br />
       <Results data={recipeData} />
     </div>
   );
 }
 
 export default App;
-
-
