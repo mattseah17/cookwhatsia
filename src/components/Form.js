@@ -28,27 +28,35 @@ const Form = (props) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="centered">
         <p>I have these ingredients:</p>
-        <input
-          type="text"
-          onChange={handleinput1Change}
-          placeholder="Enter ingredient"
-          value={inputs.input1}
-        />
-        <input
-          type="text"
-          onChange={handleinput2Change}
-          placeholder="Enter ingredient"
-          value={inputs.input2}
-        />
-        <input
-          type="text"
-          onChange={handleinput3Change}
-          placeholder="Enter ingredient"
-          value={inputs.input3}
-        />
-        <button type="submit" value="submit">
+        <div className="row g-4">
+          <div className="col-sm-3">
+            <input
+              type="text"
+              onChange={handleinput1Change}
+              placeholder="Enter ingredient"
+              value={inputs.input1}
+            />
+          </div>
+          <div className="col-sm-3">
+            <input
+              type="text"
+              onChange={handleinput2Change}
+              placeholder="Enter ingredient"
+              value={inputs.input2}
+            />
+          </div>
+          <div className="col-sm-3">
+            <input
+              type="text"
+              onChange={handleinput3Change}
+              placeholder="Enter ingredient"
+              value={inputs.input3}
+            />
+          </div>
+        </div>
+        <button type="submit" value="submit" className="btn btn-primary">
           Search for recipes
         </button>
       </form>

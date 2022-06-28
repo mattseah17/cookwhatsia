@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import RecipeModal from "./RecipeModal";
+// import styles from "./Results.module.css";
 
 const Results = (props) => {
   const [instruction, setInstruction] = useState([]);
   const [wait, setWait] = useState([]);
   const [show, setShow] = useState(false);
 
-  const apiKey = "f6e6a9203bdf48288b765dd4b7ccefc0";
+  const apiKey = "f7d211772266428a8a44d76303b2db13";
 
   const generateRecipe = async (id) => {
     const url = `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=${apiKey}`;
@@ -29,15 +30,15 @@ const Results = (props) => {
 
   const recipes = props.data.map((d) => {
     return (
-      <>
-        <div id={d.id} key={d.id}>
-          <img src={d.image} alt="" />
-          <br />
-          <p>{d.title}</p>
+      <div className="card d-inline-flex m-2" style={{ width: "18rem" }} id={d.id} key={d.id}>
+        <img src={d.image} alt="" />
+        <div class="card-body">
+          <h5 class="card-title">{d.title}</h5>
           <button
             type="submit"
             value="submit"
             onClick={() => generateRecipe(d.id)}
+            className="btn btn-dark"
           >
             Click for Recipe
           </button>
@@ -50,7 +51,7 @@ const Results = (props) => {
             />
           )}
         </div>
-      </>
+      </div>
     );
   });
 
