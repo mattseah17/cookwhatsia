@@ -30,27 +30,35 @@ const Results = (props) => {
 
   const recipes = props.data.map((d) => {
     return (
-      <div className="card d-inline-flex m-2" style={{ width: "18rem" }} id={d.id} key={d.id}>
-        <img src={d.image} alt="" />
-        <div class="card-body">
-          <h5 class="card-title">{d.title}</h5>
+      <div
+        className="bg-white rounded-md overflow-hidden shadow-md hover:shadow-xl transform hover:scale-110 duration-300"
+        id={d.id}
+        key={d.id}
+      >
+        <img
+          className="w-full h-32 sm:h-48 object-cover"
+          src={d.image}
+          alt=""
+        />
+        <div className="m-4">
+          <h5 className="text-gray-500 font-semibold text-lg p-2">{d.title}</h5>
           <button
+            className="rounded-full py-2 px-3 uppercase text-red-700 text-xs font-semibold cursor-pointer tracking-wider border-red-400 border-2 hover:bg-red-400 hover:text-white transition hover:ease-out duration-300"
             type="submit"
             value="submit"
             onClick={() => generateRecipe(d.id)}
-            className="btn btn-dark"
           >
             Click for Recipe
           </button>
-          {show && (
-            <RecipeModal
-              title="Instructions"
-              message={instruction}
-              show={show}
-              onClose={() => setShow(false)}
-            />
-          )}
         </div>
+        {show && (
+          <RecipeModal
+            title="Instructions"
+            message={instruction}
+            show={show}
+            onClose={() => setShow(false)}
+          />
+        )}
       </div>
     );
   });

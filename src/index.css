@@ -1,24 +1,9 @@
-* {
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
-header {
-  background-color: #94B49F;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html {
-  font-family: sans-serif;
-}
-
-body {
-  margin: 0;
-  background-color: #FCF8E8;
-}
-
-.centered {
-  margin: 3rem auto;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.btn {
+  @apply rounded-full py-2 px-3 uppercase text-xs font-semibold cursor-pointer tracking-wider;
 }

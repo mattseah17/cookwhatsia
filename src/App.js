@@ -20,8 +20,10 @@ function App() {
     <div>
       <Form onSave={generateSearch} />
       <br />
-      <br />
-      <Results data={recipeData} />
+      <h4 className="text-3xl font-bold border-b border-gray-200">Recipes</h4>
+      <div className="mt-8 grid grid-cols-4 grid-rows-3 gap-4">
+        <Results data={recipeData} />
+      </div>
     </div>
   );
 }
