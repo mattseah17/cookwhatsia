@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
+import DurationBadge from "./DurationBadge";
 import RecipeModal from "./RecipeModal";
-// import styles from "./Results.module.css";
+
 
 const Results = (props) => {
   const [instruction, setInstruction] = useState([]);
   const [wait, setWait] = useState([]);
   const [show, setShow] = useState(false);
 
-  const apiKey = "f7d211772266428a8a44d76303b2db13";
+  const apiKey = "f30518619f5b4aaa92944bafe8f2b949";
 
   const generateRecipe = async (id) => {
     const url = `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=${apiKey}`;
@@ -31,7 +32,7 @@ const Results = (props) => {
   const recipes = props.data.map((d) => {
     return (
       <div
-        className="bg-white rounded-md overflow-hidden shadow-md hover:shadow-xl transform hover:scale-110 duration-300"
+        className="relative flex flex-wrap bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transform hover:scale-110 duration-300"
         id={d.id}
         key={d.id}
       >
@@ -51,6 +52,7 @@ const Results = (props) => {
             Click for Recipe
           </button>
         </div>
+        <DurationBadge id={d.id}/>
         {show && (
           <RecipeModal
             title="Instructions"
@@ -63,7 +65,7 @@ const Results = (props) => {
     );
   });
 
-  return <div>{recipes}</div>;
+  return <div className="leading-relaxed">{recipes}</div>;
 };
 
 export default Results;

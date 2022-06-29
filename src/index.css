@@ -7,3 +7,10 @@
 .btn {
   @apply rounded-full py-2 px-3 uppercase text-xs font-semibold cursor-pointer tracking-wider;
 }
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: url(/Users/mattseah/Documents/GitHub/cookwhatsia/src/images/cooking.jpg);
+  background-size: cover;
+}
