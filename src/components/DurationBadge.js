@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const DurationBadge = (props) => {
   const [duration, setDuration] = useState("");
-  const apiKey = "f30518619f5b4aaa92944bafe8f2b949";
+  const apiKey = "f6e6a9203bdf48288b765dd4b7ccefc0";
 
   useEffect(() => {
     const fetchInfo = async () => {
@@ -19,7 +19,7 @@ const DurationBadge = (props) => {
     fetchInfo();
   }, [props.id]);
   return (
-    <div className="bg-amber-100 text-amber-600 text-xs uppercase font-semibold rounded-full p-2 absolute top-1 left-1 opacity-75">
+    <div className="bg-amber-100 text-amber-600 text-xs uppercase font-semibold rounded-lg p-2 absolute top-1 left-1 opacity-75">
       <svg
         className="w-4 inline-block"
         xmlns="http://www.w3.org/2000/svg"

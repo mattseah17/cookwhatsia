@@ -14,3 +14,10 @@
   background: url(/Users/mattseah/Documents/GitHub/cookwhatsia/src/images/cooking.jpg);
   background-size: cover;
 }
+
+body {
+  background: url(/Users/mattseah/Documents/GitHub/cookwhatsia/src/images/background-marble.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

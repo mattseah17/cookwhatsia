@@ -8,7 +8,7 @@ const Results = (props) => {
   const [wait, setWait] = useState([]);
   const [show, setShow] = useState(false);
 
-  const apiKey = "f30518619f5b4aaa92944bafe8f2b949";
+  const apiKey = "f6e6a9203bdf48288b765dd4b7ccefc0";
 
   const generateRecipe = async (id) => {
     const url = `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=${apiKey}`;
@@ -32,7 +32,7 @@ const Results = (props) => {
   const recipes = props.data.map((d) => {
     return (
       <div
-        className="relative flex flex-wrap bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transform hover:scale-110 duration-300"
+        className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transform hover:scale-110 duration-300 inline-block w-1/4 h-1/5 mt-7 mb-3 ml-5 mr-5"
         id={d.id}
         key={d.id}
       >

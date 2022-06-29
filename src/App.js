@@ -5,7 +5,7 @@ import Results from "./components/Results";
 function App() {
   const [recipeData, setRecipeData] = useState([]);
 
-  const apiKey = "f30518619f5b4aaa92944bafe8f2b949";
+  const apiKey = "f6e6a9203bdf48288b765dd4b7ccefc0";
 
   const generateSearch = async (input) => {
     if (input) {
@@ -20,8 +20,8 @@ function App() {
     <div>
       <Form onSave={generateSearch} />
       <br />
-      <h4 className="text-3xl font-bold border-b border-gray-200">Recipes</h4>
-      <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      <h4 className="sticky text-3xl font-bold border-b border-gray-200">Recipes</h4>
+      <div className="p-10 ml-40">
         <Results data={recipeData} />
       </div>
     </div>
