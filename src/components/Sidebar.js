@@ -15,15 +15,15 @@ const Sidebar = () => {
       ) : (
         <svg
           onClick={() => setSidebar(!sidebar)}
-          className="fixed  z-30 flex items-center cursor-pointer right-10 top-5"
+          className="fixed z-30 flex items-center cursor-pointer right-10 top-5"
           fill="#654321"
           viewBox="0 0 100 80"
           width="40"
           height="40"
         >
           <rect width="80" height="9"></rect>
-          <rect y="30" width="80" height="9"></rect>
-          <rect y="60" width="80" height="9"></rect>
+          <rect y="25" width="80" height="9"></rect>
+          <rect y="50" width="80" height="9"></rect>
         </svg>
       )}
 
@@ -33,17 +33,29 @@ const Sidebar = () => {
         } ease-in-out duration-300`}
       >
         <div>
-          <NavLink to="/about" className="flex mb-2">
+          <NavLink
+            to="/about"
+            className="flex mb-2 hover:scale-105"
+            onClick={() => setSidebar(!sidebar)}
+          >
             About
           </NavLink>
         </div>
         <div>
-          <NavLink to="/main" className="flex mb-2">
+          <NavLink
+            to="/main"
+            className="flex mb-2 hover:scale-105"
+            onClick={() => setSidebar(!sidebar)}
+          >
             Recipes
           </NavLink>
         </div>
         <div>
-          <NavLink to="/contact" className="flex mb-2">
+          <NavLink
+            to="/contact"
+            className="flex mb-2 hover:scale-105"
+            onClick={() => setSidebar(!sidebar)}
+          >
             Contact
           </NavLink>
         </div>

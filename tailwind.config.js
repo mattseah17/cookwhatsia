@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         body: ["Nunito"],
+        body2: ["Italiana"]
       },
     },
   },

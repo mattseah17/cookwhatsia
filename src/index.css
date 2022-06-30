@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -20,4 +21,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.about {
+  background: url(/Users/mattseah/Documents/GitHub/cookwhatsia/src/images/dining.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 92.4%;
+  height: 55%;
 }
