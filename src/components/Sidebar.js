@@ -28,7 +28,7 @@ const Sidebar = () => {
       )}
 
       <div
-        className={`top-0 right-0 w-[20vw] bg-amber-100 opacity-60  p-10 pl-2 text-amber-900 fixed h-full z-40 ${
+        className={`top-0 right-0 w-[20vw] bg-amber-100 opacity-70  p-10 pl-2 text-amber-900 fixed h-full z-40 ${
           sidebar ? "translate-x-0 " : "translate-x-full"
         } ease-in-out duration-300`}
       >

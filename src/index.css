@@ -12,8 +12,10 @@
 .header {
   padding: 60px;
   text-align: center;
-  background: url(/Users/mattseah/Documents/GitHub/cookwhatsia/src/images/cooking.jpg);
+  background: url(/Users/mattseah/Documents/GitHub/cookwhatsia/src/images/cookingback.jpeg);
   background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
 }
 
 body {
