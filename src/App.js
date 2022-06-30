@@ -1,29 +1,26 @@
-import React, { useState } from "react";
-import Form from "./components/Form";
-import Results from "./components/Results";
+import React, { Suspense } from "react";
+import { Route, Navigate, Routes } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+
+const About = React.lazy(() => import("./components/About"));
+const Main = React.lazy(() => import("./components/Main"));
+const Contact = React.lazy(() => import("./components/Contact"));
 
 function App() {
-  const [recipeData, setRecipeData] = useState([]);
-
-  const apiKey = "f6e6a9203bdf48288b765dd4b7ccefc0";
-
-  const generateSearch = async (input) => {
-    if (input) {
-      const recipeSrc = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${input.input1},+${input.input2},+${input.input3}`;
-      const res = await fetch(recipeSrc);
-      const recipeData = await res.json();
-      setRecipeData(recipeData);
-    }
-  };
-
   return (
-    <div>
-      <Form onSave={generateSearch} />
-      <br />
-      <h4 className="sticky text-3xl font-bold border-b border-gray-200">Recipes</h4>
-      <div className="p-10 ml-40">
-        <Results data={recipeData} />
-      </div>
+    <div className="flex flex-col items-center justify-center py-3">
+      <Sidebar />
+      <main>
+        <Suspense fallback={<p>Loading...</p>}>
+          {/* <Suspense fallback={<div className="centered"><LoadSpinner/></div>} */}
+          <Routes>
+            <Route path="/" element={<Navigate replace to="/main" />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/main" element={<Main />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Suspense>
+      </main>
     </div>
   );
 }
