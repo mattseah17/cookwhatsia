@@ -12,7 +12,6 @@ function App() {
       <Sidebar />
       <main>
         <Suspense fallback={<p>Loading...</p>}>
-          {/* <Suspense fallback={<div className="centered"><LoadSpinner/></div>} */}
           <Routes>
             <Route path="/" element={<Navigate replace to="/main" />} />
             <Route path="/about" element={<About />} />
