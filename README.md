@@ -14,7 +14,7 @@ have based on 3 ingredients they have at home.
 ### Wireframes
 
 ![Components chart](src/images/Components_chart.png)
-![My sketch](readme_image.png)
+![My sketch](src/images/readme_image.png)
 
 ### User Stories
 
