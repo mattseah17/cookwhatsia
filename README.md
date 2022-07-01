@@ -13,7 +13,8 @@ have based on 3 ingredients they have at home.
 
 ### Wireframes
 
-![My sketch](/Users/mattseah/Documents/GitHub/cookwhatsia/src/images/readme_image.png)
+![Components chart](src/images/Components_chart.png)
+![My sketch](readme_image.png)
 
 ### User Stories
 
@@ -65,6 +66,6 @@ From this site, I used 3 different links for different purposes:
 
  ## References
 
-Banner image source: https://i.pinimg.com/originals/33/ef/8b/33ef8b9c0b902154a6cd4103a21275ef.jpg
-About page image source: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkieB3XvA6E8SR11A2zG9yflRUIQ4znO03ZA&usqp=CAU
-Body background image source: https://wallpaperaccess.com/full/5110845.jpg
+- Banner image source: https://i.pinimg.com/originals/33/ef/8b/33ef8b9c0b902154a6cd4103a21275ef.jpg
+- About page image source: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkieB3XvA6E8SR11A2zG9yflRUIQ4znO03ZA&usqp=CAU
+- Body background image source: https://wallpaperaccess.com/full/5110845.jpg
