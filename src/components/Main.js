@@ -5,7 +5,7 @@ import Results from "./Results";
 const Main = () => {
   const [recipeData, setRecipeData] = useState([]);
 
-  const apiKey = "f6e6a9203bdf48288b765dd4b7ccefc0";
+  const apiKey = "1323c42e825540f8b07968d149c641be";
 
   const generateSearch = async (input) => {
     if (input) {

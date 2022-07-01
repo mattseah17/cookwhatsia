@@ -8,7 +8,7 @@ const Results = (props) => {
   const [wait, setWait] = useState([]);
   const [show, setShow] = useState(false);
 
-  const apiKey = "f6e6a9203bdf48288b765dd4b7ccefc0";
+  const apiKey = "1323c42e825540f8b07968d149c641be";
 
   const generateRecipe = async (id) => {
     const url = `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=${apiKey}`;
